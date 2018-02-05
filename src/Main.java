@@ -10,8 +10,8 @@ public class Main {
         double a;
         int i = 1;
 
-        System.out.println(String.format("Element    | Index "));
-        System.out.println(String.format("-------------------"));
+        System.out.println("Element    | Index ");
+        System.out.println("-------------------");
 
         do {
             a = 1 / Math.pow((1 + i), 2);
