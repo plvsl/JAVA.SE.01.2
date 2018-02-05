@@ -1,19 +1,22 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        double param = 0.0008;//Double.parseDouble(args[0]);
+        System.out.println("Enter parameter:");
+        Scanner sc = new Scanner(System.in);
+        double param = sc.nextDouble();
+
         double a;
+        int i = 1;
 
-        for (int i = 1;; i++) {
+        System.out.println(String.format("Element    | Index "));
+        System.out.println(String.format("-------------------"));
 
+        do {
             a = 1 / Math.pow((1 + i), 2);
-            System.out.println(a);
-
-            if (a < param) {
-                System.out.println(i);
-                break;
-            }
-
-        }
+            i += 1;
+            System.out.println(String.format("%-10f | %-7d", a, i));
+        } while (a >= param);
     }
 }
